@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <title>Responsive Redesign of Craigslist</title>
+    <!-- Bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- my css sheet -->
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img
+            src="craiglist-icon.png"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+          />
+          Craigslist
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-person-circle"></i> Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Create Posting</a>
+            </li>
+          </ul>
+        </div>
+      </nav> -->
+
+      <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="nav-item">
+          <img src="craiglist-icon.png" id="craig-icon" />
+        </div>
+        <a class="navbar-brand" href="#">
+          <div class="row"><h1>Craigslist</h1></div>
+          <div class="row"><h2>Providence,RI</h2></div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar-nav mr-auto">
+            <div class="row">
+              <button class="btn btn-outline-secondary" type="nav-item">
+                Create Posting
+              </button>
+            </div>
+            <div class="row">
+              <button class="btn btn-outline-secondary" type="nav-item">
+                <i class="bi bi-person-circle"></i> Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav> -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand justify-content-center" href="#">
+          <h1>Craigslist</h1>
+          <h2>Providence,RI</h2>
+        </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="navbar-item"> 
+              <button class="btn btn-outline-secondary navbuttons" type="nav-item">
+                Create Posting
+              </button>
+            </li>
+            <li class="navbar-item"> 
+              <button class="btn btn-outline-secondary navbuttons" type="nav-item">
+                <i class="bi bi-person-circle"></i> Login
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main stuff -->
+    <div class="container">
+      <!-- Grid row for the location stuff-->
+      <div class="row my-container" id="location-row">
+        <!-- Grid column 1-->
+        <div class="col-md-3 mb-md-0 mb-3" id="Location">
+          <h4><i class="bi bi-geo-alt"></i> Select a Location:</h4>
+        </div>
+        <div class="col-md-2 mb-md-0 mb-3" id="US/World">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Us or WorldWide</option>
+            <option value="1">United States</option>
+            <option value="2">WorldWide</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-md-0 mb-3" id="Region">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select a Region</option>
+            <option value="1">Rhode Island</option>
+            <option value="2">Massachusetts</option>
+            <option value="3">Florida</option>
+            <option value="2">Alabama</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-md-0 mb-3" id="Place">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select a Place</option>
+            <option value="1">Providence</option>
+            <option value="2">Bristol</option>
+            <option value="3">Newport</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-md-0 mb-3">
+          <select class="form-select" aria-label="Select Range">
+            <option selected>Select Range</option>
+            <option value="1">within 5 mi</option>
+            <option value="2">within 10 mi</option>
+            <option value="3">within 15 mi</option>
+            <option value="4">within 20 mi</option>
+            <option value="5">within 25 mi</option>
+          </select>
+        </div>
+        <div class="col-md-1 mb-md-0 mb-3" id="GO">
+          <button class="btn btn-outline-secondary" type="submit">Go!</button>
+        </div>
+      </div>
+      <!-- row for search -->
+      <div class="row" id="my-search">
+        <form
+          class="d-flex"
+          role="search"
+          style="padding: left 30%; padding: right 3%"
+        >
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            id="search-box"
+          />
+          <button
+            class="btn btn-outline-secondary"
+            type="submit"
+            id="search-go"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+      <!-- row for calendar and accordian -->
+      <div class="row" id="cal-acc-row">
+        <!-- calendar table -->
+        <div class="col-md-4 mb-md-0 mb-3">
+          <table>
+            <tr>
+              <th colspan="7">
+                <div class="month-header">
+                  <div class="arrow">&#10094;</div>
+                  <div>October 2022</div>
+                  <div class="arrow">&#10095;</div>
+                </div>
+              </th>
+            </tr>
+
+            <tr>
+              <th>Son</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+            <tr>
+              <td class="day-other">25</td>
+              <td class="day-other">26</td>
+              <td class="day-other">27</td>
+              <td class="day-other">28</td>
+              <td class="day-other">29</td>
+              <td class="day-other">30</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td>19</td>
+              <td class="today-cell">20</td>
+              <td>21</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+              <td>26</td>
+              <td>27</td>
+              <td>28</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>31</td>
+              <td class="day-other">1</td>
+              <td class="day-other">2</td>
+              <td class="day-other">3</td>
+              <td class="day-other">4</td>
+              <td class="day-other">5</td>
+            </tr>
+          </table>
+        </div>
+        <!-- full accordian -->
+        <div class="col-md-8 mb-md-0 mb-3">
+          <div class="accordion bg-light" id="listingsAccordian">
+            <!-- for sale accordian -->
+            <div class="accordion-item bg-light">
+              <h2 class="accordion-header bg-light" id="ForSaleHeading">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseForSale"
+                  aria-expanded="false"
+                  aria-controls="collapseForSale"
+                >
+                  For Sale <i class="bi bi-box-arrow-up-right link-icon"></i>
+                </button>
+              </h2>
+              <div
+                id="collapseForSale"
+                class="accordion-collapse collapse"
+                aria-labelledby="ForSaleHeading"
+                data-bs-parent="#listingsAccordian"
+              >
+                <div class="accordion-body">
+                  <!-- row1 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Clothes and
+                        Accessories
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">accessories</li>
+                            <li class="item-link">bottoms</li>
+                            <li class="item-link">tops</li>
+                            <li class="item-link">jackets</li>
+                            <li class="item-link">jewlery</li>
+                            <li class="item-link">shoes</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Entertainment
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">arts and crafts</li>
+                            <li class="item-link">cds, dvds, and vhs</li>
+                            <li class="item-link">concert/event tickets</li>
+                            <li class="item-link">toys and games</li>
+                            <li class="item-link">video gaming</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Equipment
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">heavy equipment</li>
+                            <li class="item-link">materials</li>
+                            <li class="item-link">musical instruments</li>
+                            <li class="item-link">photography & video</li>
+                            <li class="item-link">sporting equipment</li>
+                            <li class="item-link">tools</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                  <!-- row2 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Free / Exchange
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">barter/swap</li>
+                            <li class="item-link">free</li>
+                            <li class="item-link">exchange</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Home
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">antiques</li>
+                            <li class="item-link">appliances</li>
+                            <li class="item-link">baby and children stuff</li>
+                            <li class="item-link">farm and garden</li>
+                            <li class="item-link">furniture</li>
+                            <li class="item-link">household</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Technology
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">cellphones</li>
+                            <li class="item-link">computers</li>
+                            <li class="item-link">computer parts</li>
+                            <li class="item-link">electronics</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                  <!-- row3 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Vehicles /
+                        Related
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">atv/utv/snow-mobile</li>
+                            <li class="item-link">bikes</li>
+                            <li class="item-link">boats</li>
+                            <li class="item-link">cars and trucks</li>
+                            <li class="item-link">motorcycles</li>
+                            <li class="item-link">rvs and campers</li>
+                            <li class="item-link">trailers</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Vehicle Parts
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">auto parts</li>
+                            <li class="item-link">bike parts</li>
+                            <li class="item-link">boat parts</li>
+                            <li class="item-link">motorcycle parts</li>
+                            <li class="item-link">wheels and tires</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Other
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">aviation</li>
+                            <li class="item-link">health and beauty</li>
+                            <li class="item-link">books</li>
+                            <li class="item-link">business</li>
+                            <li class="item-link">collectibles</li>
+                            <li class="item-link">wanted</li>
+                            <li class="item-link">general</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- community accordian -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="CommunityHeading">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseCommunity"
+                  aria-expanded="false"
+                  aria-controls="collapseCommunity"
+                >
+                  Community <i class="bi bi-box-arrow-up-right link-icon"></i>
+                </button>
+              </h2>
+              <div
+                id="collapseCommunity"
+                class="accordion-collapse collapse"
+                aria-labelledby="CommunityHeading"
+                data-bs-parent="#listingsAccordian"
+              >
+                <div class="accordion-body">
+                  <!-- row1 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Groups
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">all groups</li>
+                            <li class="item-link">artists</li>
+                            <li class="item-link">musicians</li>
+                            <li class="item-link">pet owners</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Helping Each
+                        Other Out
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">lost and found</li>
+                            <li class="item-link">missed connections</li>
+                            <li class="item-link">volunteers</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Info
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">local news</li>
+                            <li class="item-link">politics</li>
+                            <li class="item-link">rants and raves</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                  <!-- row2 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Services
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">rideshare</li>
+                            <li class="item-link">childcare</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Things to Do
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">activities</li>
+                            <li class="item-link">classes</li>
+                            <li class="item-link">events</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- services accordian  -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="ServicesHeading">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseServices"
+                  aria-expanded="false"
+                  aria-controls="collapseServices"
+                >
+                  Services <i class="bi bi-box-arrow-up-right link-icon"></i>
+                </button>
+              </h2>
+              <div
+                id="collapseServices"
+                class="accordion-collapse collapse"
+                aria-labelledby="ServicesHeading"
+                data-bs-parent="#listingsAccordian"
+              >
+                <div class="accordion-body">
+                  <!-- row1 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Personal
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">beauty</li>
+                            <li class="item-link">financial</li>
+                            <li class="item-link">health/wellness</li>
+                            <li class="item-link">household</li>
+                            <li class="item-link">legal</li>
+                            <li class="item-link">pets</li>
+                            <li class="item-link">travel and vacation</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Professional
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">bicycle repair</li>
+                            <li class="item-link">event planning</li>
+                            <li class="item-link">movers</li>
+                            <li class="item-link">real estate</li>
+                            <li class="item-link">skilled trade</li>
+                            <li class="item-link">small business ads</li>
+                            <li class="item-link">tech help</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Other
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">creative</li>
+                            <li class="item-link">farm and garden</li>
+                            <li class="item-link">lessons</li>
+                            <li class="item-link">marine</li>
+                            <li class="item-link">
+                              writing, editing, and translating
+                            </li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- discussion accordian -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="DiscussionHeading">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseDiscussion"
+                  aria-expanded="false"
+                  aria-controls="collapseDiscussion"
+                >
+                  Discussion Forums
+                  <i class="bi bi-box-arrow-up-right link-icon"></i>
+                </button>
+              </h2>
+              <div
+                id="collapseDiscussion"
+                class="accordion-collapse collapse"
+                aria-labelledby="DiscussionHeading"
+                data-bs-parent="#listingsAccordian"
+              >
+                <div class="accordion-body">
+                  <!-- row1 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Academic Subjects
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">astrophysics</li>
+                            <li class="item-link">ecology</li>
+                            <li class="item-link">history</li>
+                            <li class="item-link">music</li>
+                            <li class="item-link">philosophy</li>
+                            <li class="item-link">politics</li>
+                            <li class="item-link">psyhcology</li>
+                            <li class="item-link">science</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Arts/Writing
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">arts</li>
+                            <li class="item-link">film</li>
+                            <li class="item-link">haiku</li>
+                            <li class="item-link">words</li>
+                            <li class="item-link">writing</li>
+                            <li class="item-link">photography</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Food
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">general food</li>
+                            <li class="item-link">diet</li>
+                            <li class="item-link">vegan</li>
+                            <li class="item-link">gardening</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                  <!-- row2 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Fun
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">beauty</li>
+                            <li class="item-link">celebrities</li>
+                            <li class="item-link">gaming</li>
+                            <li class="item-link">jokes</li>
+                            <li class="item-link">sports</li>
+                            <li class="item-link">supernatural</li>
+                            <li class="item-link">travel</li>
+                            <li class="item-link">tv</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Help
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">general help</li>
+                            <li class="item-link">legal</li>
+                            <li class="item-link">feedback</li>
+                            <li class="item-link">fixit</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Life
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">addiction</li>
+                            <li class="item-link">divorce</li>
+                            <li class="item-link">dying</li>
+                            <li class="item-link">frugal</li>
+                            <li class="item-link">housing</li>
+                            <li class="item-link">jobs</li>
+                            <li class="item-link">manners</li>
+                            <li class="item-link">marriage</li>
+                            <li class="item-link">money</li>
+                            <li class="item-link">parent</li>
+                            <li class="item-link">pets</li>
+                            <li class="item-link">romantic advice</li>
+                            <li class="item-link">taxes</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                  <!-- row3 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Religion
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">atheism</li>
+                            <li class="item-link">religion</li>
+                            <li class="item-link">spirituality</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Tech
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">apple/mac</li>
+                            <li class="item-link">computer</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Vehicles
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">automobiles</li>
+                            <li class="item-link">bikes</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- housing accordian TODO -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="HousingHeading">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseHousing"
+                  aria-expanded="false"
+                  aria-controls="collapseHousing"
+                >
+                  Housing <i class="bi bi-box-arrow-up-right link-icon"></i>
+                </button>
+              </h2>
+              <div
+                id="collapseHousing"
+                class="accordion-collapse collapse"
+                aria-labelledby="HousingHeading"
+                data-bs-parent="#listingsAccordian"
+              >
+                <div class="accordion-body">
+                  <!-- row1 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> I need housing
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">apts / housing</li>
+                            <li class="item-link">rooms / shared</li>
+                            <li class="item-link">sublets / temporary</li>
+                            <li class="item-link">housing swap</li>
+                            <li class="item-link">real estate for sale</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> I have housing to
+                        rent/sell
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">housing wanted</li>
+                            <li class="item-link">rooms wanted</li>
+                            <li class="item-link">rooms / shared</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Other
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">office / commercial</li>
+                            <li class="item-link">parking / storage</li>
+                            <li class="item-link">vacation rentals</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- jobs accordian TODO -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="JobsHeading">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseJobs"
+                  aria-expanded="false"
+                  aria-controls="collapseJobs"
+                >
+                  Jobs <i class="bi bi-box-arrow-up-right link-icon"></i>
+                </button>
+              </h2>
+              <div
+                id="collapseJobs"
+                class="accordion-collapse collapse"
+                aria-labelledby="JobsHeading"
+                data-bs-parent="#listingsAccordian"
+              >
+                <div class="accordion-body">
+                  <!-- row1 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Art
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">art, media, design</li>
+                            <li class="item-link">tv, film, video</li>
+                            <li class="item-link">writing and editing</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Business
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">accounting and finance</li>
+                            <li class="item-link">admin and office</li>
+                            <li class="item-link">business and management</li>
+                            <li class="item-link">marketing, pr, ads</li>
+                            <li class="item-link">real estate</li>
+                            <li class="item-link">
+                              sales and business development
+                            </li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Customer-Facing
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">customer service</li>
+                            <li class="item-link">
+                              food, beverage, hospitality
+                            </li>
+                            <li class="item-link">human resources</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                  <!-- row2 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Public Sector
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">education</li>
+                            <li class="item-link">government</li>
+                            <li class="item-link">legal / paralegal</li>
+                            <li class="item-link">nonprofit sector</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> STEM
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">
+                              architecture and engineering
+                            </li>
+                            <li class="item-link">biotech and science</li>
+                            <li class="item-link">medical and health</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Tech
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">software, qa, dba</li>
+                            <li class="item-link">systems and networks</li>
+                            <li class="item-link">technical support</li>
+                            <li class="item-link">web and info design</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                  <!-- row3 -->
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> Misc
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">general labor</li>
+                            <li class="item-link">manufactoring</li>
+                            <li class="item-link">retail / wholesale</li>
+                            <li class="item-link">salon, spa, fitness</li>
+                            <li class="item-link">security</li>
+                            <li class="item-link">skilled trade / craft</li>
+                            <li class="item-link">transport</li>
+                            <li class="item-link">other</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- gigs accordian TODO -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="GigsHeading">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseGigs"
+                  aria-expanded="false"
+                  aria-controls="collapseGigs"
+                >
+                  Gigs <i class="bi bi-box-arrow-up-right link-icon"></i>
+                </button>
+              </h2>
+              <div
+                id="collapseGigs"
+                class="accordion-collapse collapse"
+                aria-labelledby="GigsHeading"
+                data-bs-parent="#listingsAccordian"
+              >
+                <div class="accordion-body">
+                  <div class="row my-accordian-row">
+                    <div class="col-md-4 mb-md-0 mb-3 my-accordian-col">
+                      <li class="list-unstyled">
+                        <i class="bi bi-caret-right-fill"></i> All
+                        <ul class="list-unstyled">
+                          <ul>
+                            <li class="item-link">computer</li>
+                            <li class="item-link">creative</li>
+                            <li class="item-link">crew</li>
+                            <li class="item-link">domestic</li>
+                            <li class="item-link">event</li>
+                            <li class="item-link">labor</li>
+                            <li class="item-link">talent</li>
+                            <li class="item-link">writing</li>
+                          </ul>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small pt-3" id="myfooter">
+      <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column 1-->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.craigslist.org/about/">about craiglist</a>
+              </li>
+              <li>
+                <a href="https://www.craigslist.org/about/privacy.policy"
+                  >privacy policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.craigslist.org/about/terms.of.use"
+                  >terms of use</a
+                >
+              </li>
+              <li>
+                <a href="https://forums.craigslist.org/?forumID=8">feedback</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Grid column 2 -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.craigslist.org/about/help/">help</a>
+              </li>
+              <li>
+                <a href="https://www.craigslist.org/about/scams"
+                  >avoiding scams</a
+                >
+              </li>
+              <li>
+                <a href="https://www.craigslist.org/about/safety"
+                  >safety tips</a
+                >
+              </li>
+              <li>
+                <a href="https://www.craigslist.org/about/help/system-status"
+                  >system status</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Grid column 3 -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.craigslist.org/about/craigslist_app"
+                  >craigslist app</a
+                >
+              </li>
+              <li>
+                <a href="http://blog.craigslist.org/">craiglist blog</a>
+              </li>
+              <li>
+                <a href="https://www.craigslist.org/about/best/all/"
+                  >best of craigslist</a
+                >
+              </li>
+              <li>
+                <a href="http://www.craigslistjoe.com/">"craiglist joe"</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Grid column 4 -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.craigslist.org/about/open_source"
+                  >craigslist open source</a
+                >
+              </li>
+              <li>
+                <a href="https://craignewmarkphilanthropies.org/"
+                  >philanthropy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.craigslist.org/about/craigslist_is_hiring"
+                  >craigslist is hiring</a
+                >
+              </li>
+              <li>
+                <a href="https://providence.craigslist.org/sitemap.html"
+                  >sitemap</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">
+        © 2022 Copyright:
+        <a href="/"> craigslist.org</a>
+      </div>
+    </footer>
+  </body>
+
+  <!-- Boostrap scripts  -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"
+  ></script>
+</html>

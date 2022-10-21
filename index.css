@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Default height for small devices
+#header-image {
+  height: 100px;
+}
+
+#header-overlay {
+  height: 100px;
+}
+
+/* Height for devices larger than 992px */
+/* @media (min-width: 992px) {
+  #header-image {
+    height: 200px;
+  }
+  #header-overlay {
+    height: 200px;
+  }
+} */
+
+body {
+  background-color: rgb(226, 235, 240);
+  color: #000000; /* text color */
+}
+
+#myfooter {
+  background-color: rgb(198, 218, 231);
+}
+
+table {
+  border-collapse: collapse;
+  background: rgb(255, 255, 255);
+  color: black;
+}
+
+th {
+  font-weight: bold;
+}
+
+th,
+td,
+#other,
+#today {
+  border: 1px solid lightgray;
+  /* height: 50px;
+  width: 100px; */
+  height: 46px;
+  width: 100px;
+  text-align: center;
+}
+
+/* media for phone */
+@media (max-width: 480px) {
+  th,
+  td,
+  #other,
+  #today {
+    height: 25px;
+  }
+  /* #my-search {
+    width: 100%;
+  } */
+}
+
+@media (max-width: 760px) {
+  th,
+  td,
+  #other,
+  #today {
+    height: 35px;
+  }
+  /* #my-search {
+    width: 100%;
+  } */
+}
+
+.day-other {
+  color: lightgrey;
+}
+
+.today-cell {
+  color: rgb(164, 186, 201);
+  font-weight: 900;
+}
+
+td:hover {
+  background-color: rgb(246, 227, 204);
+  cursor: pointer;
+}
+
+.day-other:hover {
+  background-color: white;
+  cursor: default;
+}
+
+.month-header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.arrow:hover {
+  background-color: rgb(235, 235, 235);
+  cursor: pointer;
+}
+
+.link-icon {
+  padding-left: 10px;
+}
+
+.link-icon:hover {
+  -webkit-text-stroke: 1px;
+}
+
+.location-row {
+  display: flex;
+  width: 10%;
+}
+
+/* .item-link { */
+/* padding-left: 20px; */
+/* text-indent: -25px; */
+/* list-style-position: outside; */
+/* } */
+
+.item-link:hover {
+  color: rgb(114, 154, 177);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: white;
+}
+
+.accordion-button {
+  background-color: white;
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+/* my-accordian-row for each row in accordian */
+
+/* #my-search {
+  width: 50%;
+} */
+/* 
+#search-box {
+  width: 75%;
+}
+
+#search-go {
+  width: 25%;
+} */
+
+#craig-icon {
+  width: 20%;
+}
+
+#cal-acc-row {
+  padding-top: 4%;
+  padding-bottom: 3%;
+}
+
+#my-search {
+  padding-top: 2%;
+}
+
+#location-row {
+  padding-top: 2%;
+}
+
+a {
+  color: rgb(114, 113, 113);
+}
+
+a:hover {
+  color: rgb(81, 81, 81);
+  font-weight: 600;
+}
